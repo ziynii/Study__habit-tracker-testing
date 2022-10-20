@@ -16,12 +16,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cypress": "cypress open",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:cypress/recommended"
+    ]
   },
   "browserslist": {
     "production": [
@@ -36,7 +40,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "@types/jest": "^29.2.0",
+    "cypress": "^10.10.0",
     "react-test-renderer": "^16.8.4"
   }
 }
